@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Let Me Fly product and architecture overview</title>
+  <desc id="desc">Original schematic showing browser product surfaces, member-scoped services, two runtime adapters, and validation evidence. It is not a screenshot and contains no real travel data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1524"/>
+      <stop offset="1" stop-color="#152a3a"/>
+    </linearGradient>
+    <linearGradient id="globe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#74d4ce"/>
+      <stop offset="1" stop-color="#2c779a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity=".22"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#82aabb"/>
+    </marker>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .title { fill: #f4fbff; font-size: 28px; font-weight: 700; }
+      .subtitle { fill: #9fc0cc; font-size: 14px; }
+      .section { fill: #8db7c4; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; }
+      .label { fill: #e9f7fa; font-size: 15px; font-weight: 650; }
+      .small { fill: #a8c6cf; font-size: 12px; }
+      .tiny { fill: #87aeb9; font-size: 10px; }
+      .card { fill: #122639; stroke: #31586a; stroke-width: 1.2; }
+      .service { fill: #183445; stroke: #4b8791; stroke-width: 1.2; }
+      .data { fill: #172d3b; stroke: #5a8c94; stroke-width: 1.2; }
+      .check { fill: #192c3c; stroke: #557c9a; stroke-width: 1.2; }
+      .line { stroke: #82aabb; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #60869a; stroke-width: 1.2; stroke-dasharray: 5 5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <circle cx="1075" cy="92" r="170" fill="#2e7582" opacity=".09"/>
+  <circle cx="1105" cy="90" r="106" fill="none" stroke="#6fb0b2" stroke-opacity=".13"/>
+  <circle cx="1105" cy="90" r="76" fill="none" stroke="#6fb0b2" stroke-opacity=".13"/>
+  <path d="M1010 120 C1060 70 1135 66 1190 102" fill="none" stroke="#6fb0b2" stroke-opacity=".13"/>
+
+  <text x="54" y="62" class="sans title">让我飞吧 / LET ME FLY</text>
+  <text x="56" y="89" class="sans subtitle">A private travel globe · product boundary, data protection, and recovery evidence</text>
+
+  <text x="58" y="137" class="sans section">01 · PRODUCT SURFACES</text>
+  <rect x="52" y="154" width="236" height="392" rx="18" class="card" filter="url(#shadow)"/>
+  <circle cx="170" cy="236" r="65" fill="url(#globe)" opacity=".95"/>
+  <ellipse cx="170" cy="236" rx="65" ry="24" fill="none" stroke="#d8ffff" stroke-opacity=".52"/>
+  <ellipse cx="170" cy="236" rx="26" ry="65" fill="none" stroke="#d8ffff" stroke-opacity=".52"/>
+  <path d="M111 253 C138 211 177 196 226 216" fill="none" stroke="#f2ffff" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>
+  <circle cx="125" cy="247" r="4" fill="#fff2b2"/>
+  <circle cx="218" cy="215" r="4" fill="#fff2b2"/>
+  <text x="82" y="344" class="sans label">三维地球与演示</text>
+  <text x="82" y="373" class="sans small">旅程 · 回顾 · 账户</text>
+  <text x="82" y="397" class="sans small">导入 · 备份 · 有限分享</text>
+  <text x="82" y="421" class="sans small">所有者管理</text>
+  <line x1="82" y1="451" x2="252" y2="451" stroke="#31586a"/>
+  <text x="82" y="480" class="sans tiny">Private by design</text>
+  <text x="82" y="500" class="sans tiny">No public social feed</text>
+
+  <text x="346" y="137" class="sans section">02 · SERVER BOUNDARY</text>
+  <rect x="338" y="154" width="348" height="392" rx="18" class="service" filter="url(#shadow)"/>
+  <rect x="366" y="187" width="292" height="72" rx="12" fill="#20495a"/>
+  <text x="388" y="217" class="sans label">身份与会话</text>
+  <text x="388" y="240" class="sans small">密码账户 · 旧 WebAuthn 兼容</text>
+  <rect x="366" y="281" width="292" height="83" rx="12" fill="#20495a"/>
+  <text x="388" y="312" class="sans label">成员范围授权</text>
+  <text x="388" y="335" class="sans small">Origin/CSRF · 限速 · 幂等回执</text>
+  <text x="388" y="353" class="sans tiny">memberId 来自服务端会话</text>
+  <rect x="366" y="386" width="292" height="121" rx="12" fill="#20495a"/>
+  <text x="388" y="417" class="sans label">旅程与媒体领域</text>
+  <text x="388" y="440" class="sans small">路段 · 标签 · 照片 · 分享</text>
+  <text x="388" y="464" class="sans small">签名 / 摘要 / 选择性公开</text>
+  <text x="388" y="487" class="sans tiny">可恢复生命周期与发布来源保护</text>
+
+  <text x="744" y="137" class="sans section">03 · RUNTIME ADAPTERS</text>
+  <rect x="736" y="154" width="190" height="172" rx="18" class="data" filter="url(#shadow)"/>
+  <text x="760" y="194" class="sans label">Sites</text>
+  <text x="760" y="223" class="sans small">D1 · R2</text>
+  <text x="760" y="250" class="sans small">原有受限环境</text>
+  <text x="760" y="281" class="sans tiny">独立版本与数据登记</text>
+
+  <rect x="946" y="154" width="202" height="172" rx="18" class="data" filter="url(#shadow)"/>
+  <text x="970" y="194" class="sans label">Node</text>
+  <text x="970" y="223" class="sans small">SQLite · 私有媒体目录</text>
+  <text x="970" y="250" class="sans small">独立运行环境</text>
+  <text x="970" y="281" class="sans tiny">同一产品边界</text>
+
+  <rect x="736" y="354" width="412" height="192" rx="18" class="check" filter="url(#shadow)"/>
+  <text x="760" y="392" class="sans label">验证证据</text>
+  <text x="760" y="420" class="sans small">本地：渲染 · 安全 · 账户 · 旅程 · 恢复</text>
+  <text x="760" y="447" class="sans small">发布：来源 · 构建 · HTTP 权限边界</text>
+  <text x="760" y="474" class="sans small">浏览器：Safari 桌面端记录</text>
+  <text x="760" y="507" class="sans tiny">真实手机与性能基准仍需单独验收</text>
+
+  <path d="M288 350 C308 350 316 350 338 350" class="line"/>
+  <path d="M686 255 C706 255 716 239 736 239" class="line"/>
+  <path d="M686 292 C800 292 856 286 946 239" class="line"/>
+  <path d="M686 445 C712 445 716 445 736 445" class="dash"/>
+  <path d="M832 326 C832 337 832 343 832 354" class="dash"/>
+  <path d="M1047 326 C1047 337 1047 343 1047 354" class="dash"/>
+
+  <text x="58" y="633" class="sans subtitle">原创作品集示意图 · no real travel data · no access-bearing information</text>
+  <text x="58" y="661" class="mono tiny">showcase / architecture / validation boundary</text>
+</svg>
